@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
-
+app.get('/', (req, res) => { res.send(200);})
 app.post('/', (req, res) => {
   let response = {};
   const intentName = req.body.queryResult.intent.displayName;
